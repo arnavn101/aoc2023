@@ -4,8 +4,8 @@ use std::{
     io::{prelude::*, BufReader},
 };
 
-mod d15;
-use d15::{p1, p2};
+mod d16;
+use d16::{p1, p2};
 
 fn main() {
     let args: Vec<String> = env::args().collect();
