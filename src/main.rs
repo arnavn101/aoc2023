@@ -4,8 +4,8 @@ use std::{
     io::{prelude::*, BufReader},
 };
 
-mod d19;
-use d19::{p1, p2};
+mod d20;
+use d20::{p1, p2};
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -17,8 +17,8 @@ fn main() {
 
     let input_file = match args.get(2) {
         Some(arg) => {
-            if arg == "sample" {
-                format!("inputs/d{}_sample.txt", day_number)
+            if arg.contains("sample") {
+                format!("inputs/d{}_{}.txt", day_number, arg)
             } else {
                 format!("inputs/d{}.txt", day_number)
             }
